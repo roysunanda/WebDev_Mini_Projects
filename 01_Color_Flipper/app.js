@@ -1,7 +1,30 @@
 // spellchecker: disable
 console.clear();
 
-const colors = ["green", "red", "rgba(133,122,200)", "#f15025"];
+const makeCurrent = document.querySelectorAll("nav a");
+makeCurrent[0].classList.add("current");
+if (makeCurrent[1].classList.contains("current")) {
+  makeCurrent[1].classList.remove("current");
+}
+
+// console.log(makeCurrent[0].classList);
+// if (!current.classList.contains('current')){
+//   current.classList.add('current')
+// }
+
+const colors = [
+  "Aqua",
+  "Coral",
+  "Crimson",
+  "Gold",
+  "Indigo",
+  "Lavender",
+  "Olive",
+  "Peru",
+  "Teal",
+  "Tomato",
+];
+
 const btn = document.getElementById("btn");
 const color = document.querySelector(".color");
 

@@ -1,12 +1,12 @@
 /*
-=============== 
+===============
 Fonts
 ===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
 
 /*
-=============== 
+===============
 Variables
 ===============
 */
@@ -54,7 +54,7 @@ Variables
   --fixed-width: 620px;
 }
 /*
-=============== 
+===============
 Global Styles
 ===============
 */
@@ -152,7 +152,7 @@ main {
 }
 
 /*
-=============== 
+===============
 Nav
 ===============
 */
@@ -186,11 +186,19 @@ nav a {
   letter-spacing: var(--spacing);
   margin-right: 1rem;
 }
+
+nav a.current {
+  border-bottom: 2px solid royalblue;
+  padding-bottom: 2px;
+  /* border-radius: 4px; */
+  /* font-weight: 900; */
+}
+
 nav a:hover {
   color: var(--clr-primary-5);
 }
 /*
-=============== 
+===============
 Container
 ===============
 */
@@ -210,7 +218,7 @@ main {
   margin-bottom: 2.5rem;
 }
 .color {
-  color: var(--clr-primary-5);
+  color: #fff;
 }
 .btn-hero {
   font-family: var(--ff-primary);
