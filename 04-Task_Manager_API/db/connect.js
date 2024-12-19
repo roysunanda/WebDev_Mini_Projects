@@ -1,2 +1,9 @@
-const connectionString =
-  "mongodb+srv://sandy:<db_password>@task-manager.tbvrt.mongodb.net/task-manager?retryWrites=true&w=majority&appName=task-manager";
+import mongoose from "mongoose";
+
+const db_name = "TASK-MANAGER";
+
+const connectDB = (url) => {
+  return mongoose.connect(`${url}/${db_name}`);
+};
+
+export { connectDB };

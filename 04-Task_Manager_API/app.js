@@ -1,5 +1,7 @@
 import express from "express";
 import { router } from "./routers/tasks.routers.js";
+import { connectDB } from "./db/connect.js";
+import mongoose from "mongoose";
 
 const app = express();
 const PORT = 3000;
@@ -17,4 +19,15 @@ app.all("*", (req, res) => {
   res.status(404).send(`<h1>🚫 Page Invalid!!</h1>`);
 });
 
-app.listen(PORT, console.log(`🌐 server is listening on port ${PORT}...`));
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGODB_URI);
+    console.log(`\n✅ MongoDB Connected!!`);
+    app.listen(PORT, console.log(`🌐 server is listening on port ${PORT}`));
+  } catch (error) {
+    console.log(`\nMongoDB connection Error: ${error}`);
+    process.exit(1);
+  }
+};
+
+start();
